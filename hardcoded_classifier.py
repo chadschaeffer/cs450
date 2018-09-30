@@ -21,15 +21,13 @@ print(accuracy_score(y_test, y_predicted))
 
 # Part 5
 class HardCodedModel:
-    def predict(self, X_test):
-        if y_test <= 2:
-            y_test = 0
-            return y_test
+    def predict(self, X_Test_in_class):
+        return [0] * len(X_Test_in_class)
 
 
 class HardCodedClassifier:
     def fit(self, X_train, y_train):
-        return HardCodedModel
+        return HardCodedModel()
 
 
 classifier = HardCodedClassifier()
